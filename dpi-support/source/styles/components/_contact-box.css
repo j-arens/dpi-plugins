@@ -1,0 +1,39 @@
+:root {
+    --contactBoxIconFill: #86939e;
+    --contactBoxSubTitleColor: #86939e;
+}
+
+.c-contact-box {
+    display: none;
+}
+
+@media screen and (--breakpoint-md) {
+    .c-contact-box {
+        @apply --clearfix;
+        display: block;
+        padding-top: 1.1875em;
+        padding-bottom: 1.1875em;
+        margin-bottom: 5.625em;
+    }
+
+    .c-contact-box-- {
+        &icon {
+            float: left;
+            margin-right: 2.8125em;
+            width: 100%;
+            height: 100%;
+            max-width: 5em;
+            max-height: 5em;
+            fill: var(--contactBoxIconFill);
+        }
+
+        &title {
+            font-size: 1.875em;
+            margin: 0 0 .7375rem 0;
+        }
+
+        &sub-title {
+            color: var(--contactBoxSubTitleColor);
+        }
+    }
+}

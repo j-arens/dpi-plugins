@@ -1,0 +1,1 @@
+{"version":3,"sources":["plugin-page.css"],"names":[],"mappings":"AAAA,4BACI,eAAiB,CACpB","file":"plugin-page.min.css","sourcesContent":["#dpiPluginPage__root select {\r\n    min-width: 162px;\r\n}"]}

@@ -1,0 +1,26 @@
+.dpi-cal-error {
+  display: flex;
+  position: relative;
+  background: #d94f4f;
+  padding: 16px 16px 16px 60px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.dpi-cal-error svg {
+  fill: #fff;
+  padding: 0 8px;
+  width: 44px;
+  height: 100%;
+  margin-right: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #b52727;
+}
+
+.dpi-cal-error p {
+  color: #fff;
+  font-size: 15px;
+  margin: 0;
+}

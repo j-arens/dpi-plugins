@@ -1,0 +1,66 @@
+/**
+* Body
+*/
+body.login {
+    /*background-color: ;*/
+}
+
+/**
+* Logo / link
+*/
+body.login div#login h1 a {
+    /*background-image: url();*/
+}
+
+/**
+* Form
+*/
+body.login  div#login form#loginform {
+
+}
+
+/**
+* Labels
+*/
+body.login div#login form#loginform p label {
+
+}
+
+body.login div#login form#loginform p.forgetmenot { /* remember me label */
+
+}
+
+/**
+* Inputs
+*/
+body.login div#login form#loginform input#user_login { /* username input */
+
+}
+
+body.login div#login form#loginform input#user_pass { /* password input */
+
+}
+
+body.login div#login form#loginform input#rememberme { /* remember me checkbox */
+
+}
+
+/**
+* Buttons
+*/
+body.login div#login form#loginform p.submit input#wp-submit {
+    /*border-color: ;*/
+    /*box-shadow: 0 1px 0 your-color;*/
+    /*text-shadow: 0 -1px 1px your-color, 1px 0 1px your-color, 0 1px 1px your-color, -1px 0 1px your-color;*/
+}
+
+/**
+* Links
+*/
+body.login div#login p#nav a { /* lost password link */
+
+}
+
+body.login div#login p#backtoblog a { /* back to site link */
+
+}

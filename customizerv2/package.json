@@ -1,0 +1,22 @@
+{
+  "name": "dpi-customizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "build-watch": "gulp build-watch",
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-arens/customizerv2.git"
+  },
+  "author": "Josh Arens",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/j-arens/customizerv2/issues"
+  },
+  "homepage": "https://github.com/j-arens/customizerv2#readme"
+}

@@ -1,0 +1,8 @@
+/**** OPTIONS NAV STYLES ****/
+
+.icon {
+  margin-right: .5em;
+  vertical-align: -.35em;
+  width: 1em;
+  fill: $color_text_disabled;
+}

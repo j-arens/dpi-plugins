@@ -1,0 +1,43 @@
+/* pulse button */
+@keyframes pulse-button {
+  from {
+    transform: translate(-50%, -50%) scale3d(0, 0, 0);
+    opacity: 1;
+  }
+  
+  to {
+    transform: translate(-50%, -50%) scale3d(2, 2, 2);
+    opacity: 0;
+  }
+}
+
+/* rotate absolute centered */
+@keyframes rotate-absolute-centered {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* flash slide down */
+@keyframes flash-slide-down {
+  from {
+    transform: translate3d(0, -5em, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* flash slide up */
+@keyframes flash-slide-up {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -5em, 0);
+    opacity: 0;
+  }
+}

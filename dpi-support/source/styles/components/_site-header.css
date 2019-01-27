@@ -1,0 +1,11 @@
+.c-site-header {
+    display: block;
+    width: 100%;
+    padding-top: 3.125em;
+    background-color: var(--colorSuccess);
+}
+
+.c-site-header__tall {
+    min-height: 31.25em;
+    padding-bottom: 5.625em;
+}

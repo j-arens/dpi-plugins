@@ -1,0 +1,10 @@
+:root {
+    --colorWhite: #fff;
+    --colorBlack: #000;
+    --colorNeutral: #ccc;
+    --colorPrimary: #2C4770;
+    --colorSuccess: #7dc855;
+    --colorCaution: #C9B31F;
+    --colorDanger: #C63B3B;
+    --colorBodyText: #43484d;
+}

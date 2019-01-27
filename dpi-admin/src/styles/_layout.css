@@ -1,0 +1,38 @@
+/**** LAYOUT ****/
+
+/** {
+ box-sizing: border-box;
+}*/
+
+/*html,
+body {
+ width: 100%;
+ min-height: 100%;
+ height: auto;
+}
+
+body {
+ background: $color_neutral;
+}*/
+
+.main-container {
+ width: 100%;
+ /*min-height: 100%;*/
+ min-height: calc(100vh - 32px);
+ height: auto;
+ display: flex;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.inner-container {
+ /*flex: 0 0 calc(100% - 15em);*/
+ flex: 0 0 calc(100% - 220px);
+ background: $color_neutral;
+ /*padding: 0 2em;*/
+ padding: 0 24px;
+ lost-utility: clearfix;
+ /*margin-left: 15em;*/
+ margin-left: 220px;
+}

@@ -1,0 +1,177 @@
+/**** SECTION CREATOR STYLES ****/
+
+#component-creator-overlay {
+  position: fixed;
+  /*width: calc(100% - 15em);*/
+  width: 100%;
+  /*margin-left: 15em;*/
+  margin-left: 160px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9998;
+}
+
+#component-creator {
+  position: absolute;
+  width: 50em;
+  background: $color_white;
+  z-index: 9999;
+  top: 10em;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 0 2em 2em 2em;
+
+  input {
+    border: none;
+    border-bottom: 1px solid #aaa;
+    margin-top: -.5em;
+    background: none;
+    padding-top: 1em;
+    padding-left: .25em;
+    box-shadow: none;
+
+    &:focus {
+      outline: 0 !important;
+      box-shadow: none;
+    }
+  }
+
+  .btn.add {
+    height: 1.5em;
+    width: 1.5em;
+    top: 1.95em;
+  }
+
+  p {
+    margin-bottom: .25em;
+    margin-left: 2em;
+  }
+}
+
+.component-creator-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5em 1em;
+  min-height: 2em;
+  border-bottom: 1px solid $color_border;
+  width: calc(100% + 4em);
+  margin-left: -2em;
+  margin-bottom: 2em;
+  background: $color_primary_lt;
+  color: $color_white;
+
+  button {
+    border: none;
+    background: none;
+    color: $color_border;
+    cursor: pointer;
+  }
+}
+
+.title {
+  margin: 0;
+}
+
+.modal-lg {
+  border: none;
+  box-shadow: none !important;
+  margin-bottom: 0;
+  padding-bottom: 0 !important;
+}
+
+.modalcontainer {
+  lost-utility: clearfix;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+*[class*="modal-"] {
+  background: $color_white;
+  padding: 0 2em 2em 2em;
+}
+
+.modal-lg {
+  lost-column: 1/2 2;
+  min-height: 2em;
+
+  &:last-child {
+    text-align: center;
+  }
+}
+
+.modal-md {
+  lost-column: 1/2 2;
+  min-height: 2em;
+}
+
+.field-input {
+  position: relative;
+  margin-bottom: 2em;
+
+  input,
+  select {
+    display: block;
+    width: 100%;
+    height: 2.5em;
+    padding-left: 1em;
+    font-size: 1rem;
+    margin: 1em 0;
+    position: relative;
+  }
+
+  label button {
+    height: 2.5em;
+    width: 2.5em;
+    position: absolute;
+    top: 2.45em;
+    right: 0;
+
+    &:hover {
+      background: $color_success;
+      color: white;
+    }
+  }
+}
+
+.modalcontainer {
+  lost-utility: clearfix;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.delete-btn {
+  border: none;
+  background: none;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.delete-icon {
+  width: 1em;
+  fill: $color_alert;
+  vertical-align: -.15em;
+  cursor: pointer;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1rem;
+
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none;
+  }
+}

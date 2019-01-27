@@ -1,0 +1,158 @@
+/**** BUTTON STYLES ****/
+
+/**[class*="btn"] {
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1rem;
+}*/
+
+.btn {
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1rem;
+}
+
+.btn-xlg {
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  padding: 1em;
+
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none;
+  }
+}
+
+.btn-lg {
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  padding: 0.8em;
+
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none;
+  }
+}
+
+.btn-rg {
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  padding: 0.64em;
+
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none;
+  }
+}
+
+.btn-sm {
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  padding: 0.512em;
+
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none;
+  }
+}
+
+.btn-remove {
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  &:hover {
+    color: $color_alert;
+  }
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none;
+  }
+}
+
+.btn-settings {
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  &:hover {
+    color: $color_warning;
+  }
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none;
+  }
+}
+
+.btn-accordion {
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  &:hover {
+    color: $color_success;
+  }
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none;
+  }
+}
+
+.warning {
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  background: $color_accent_orange;
+  color: $color_white;
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none;
+  }
+}
+
+.alert {
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  background: #e9221d;
+  color: $color_white;
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none;
+  }
+}
+
+.success {
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  background: #8cc63f;
+  color: $color_white;
+  white-space: nowrap;
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none;
+  }
+}

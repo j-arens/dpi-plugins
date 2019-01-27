@@ -1,0 +1,22 @@
+{
+    "name": "dpi/dpi-support",
+    "description": "Wordpress plugin for easily adding documentation and support to a site",
+    "type": "project",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "j-arens",
+            "email": "arens.joshua@sbcglobal.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "klein/klein": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "DPISupport\\Plugin\\": "./plugin",
+            "DPISupport\\Controllers\\": "./controllers"
+        }
+    }
+}

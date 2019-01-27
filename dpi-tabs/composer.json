@@ -1,0 +1,17 @@
+{
+    "name": "root/dpi-tabs",
+    "authors": [
+        {
+            "name": "Josh Arens",
+            "email": "josh@netrivet.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "DpiTabs\\plugin\\": "./plugin",
+            "DpiTabs\\core\\": "./core"
+        }
+    }
+}

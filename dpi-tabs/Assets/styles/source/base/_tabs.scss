@@ -1,0 +1,124 @@
+.dpi-tab__ {
+    &root {
+        box-sizing: border-box;
+        background-color: $color-white;
+        box-shadow: 1px 3px 6px 1px rgba(0, 0, 0, .02);
+        border: 1px solid $color-neutral;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    * {
+        box-sizing: inherit;
+    }
+
+    &nav {
+        pointer-events: none;
+        opacity: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    &tabs {
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+    }
+
+    &tab {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    &tab + &tab {
+        border-top: 1px solid $color-neutral-dk;
+    }
+
+    &mobile-toggle {
+        display: block;
+        padding: 1rem;
+        background-color: $color-neutral;
+        border-bottom: 1px solid $color-neutral;
+
+        * {
+            pointer-events: none;
+        }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>');
+        }
+    }
+
+    &content {
+        position: relative;
+        height: 0;
+        opacity: 0;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    &tab-is-active {
+        .dpi-tab__mobile-toggle::before {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 13H5v-2h14v2z"/></svg>');
+        }
+
+        .dpi-tab__content {
+            padding: 1rem;
+            opacity: 1;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .dpi-tab__ {
+        &nav {
+            display: flex;
+            flex-wrap: wrap;
+            pointer-events: all;
+            opacity: 1;
+            height: auto;
+            background-color: $color-neutral;
+        }
+
+        &nav-item {
+            padding: 1rem 1.5rem;
+
+            &:not(.dpi-tab__nav-item-is-active):hover {
+                background-color: $color-neutral-lt;
+            }
+        }
+
+        &nav-item-is-active {
+            background-color: $color-white;
+        }
+
+        &tab {
+            opacity: 0;
+            height: 0;
+        }
+
+        &tab + &tab {
+            border: none;
+        }
+
+        &tab-is-active {
+            opacity: 1;
+            height: auto;
+        }
+
+        &mobile-toggle {
+            display: none;
+        }
+    }
+}

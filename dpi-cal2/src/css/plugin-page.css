@@ -1,0 +1,28 @@
+#dpi-cal-settings-page tr {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+}
+
+#dpi-cal-settings-page td {
+  margin-left: -1em;
+  margin-top: -2em;
+}
+
+#dpi-cal-settings-page input[type="text"] {
+  width: 100%;
+}
+
+#dpi-cal-settings-page input[type="checkbox"] {
+  margin-left: .25em;
+}
+
+#dpi-cal-settings-page a {
+  display: inline-block;
+  margin: .5em 0 0 .5em;
+}
+
+#dpi-cal-settings-page .disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

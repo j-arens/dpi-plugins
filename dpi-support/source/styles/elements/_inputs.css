@@ -1,0 +1,28 @@
+:root {
+    --inputBorderColorBase: #e1e8ee;
+    --inputColor: #43484d;
+    --inputPlaceholderColor: #86939e;
+    --inputInvalidBoxShadow: 0 0 1px 2px rgba(198, 59, 59, 0.6);
+
+    --input-base {
+        border: 3px solid var(--inputBorderColorBase);
+        border-radius: 4px;
+        padding: 1rem;
+        font-size: 1.25em;
+        color: var(--inputColor);
+        &::placeholder {
+        color: var(--inputPlaceholderColor);
+        }
+    };
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  @apply --input-base;
+}
+
+.input__is-invalid {
+    box-shadow: var(--inputInvalidBoxShadow);
+}

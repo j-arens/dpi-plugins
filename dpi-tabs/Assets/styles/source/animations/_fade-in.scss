@@ -1,0 +1,13 @@
+@keyframes dpiFadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .dpiFadeIn {
+    animation: .2s ease-in 0s 1 dpiFadeIn;
+  }

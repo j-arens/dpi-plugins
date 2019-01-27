@@ -1,0 +1,31 @@
+#dpi-maps-settings-page {
+    
+    .form-table {
+        max-width: 450px;
+    }
+    
+    tr {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    td {
+        margin-left: -1em;
+        margin-top: -2em;
+    }
+    
+    th,
+    input[type="text"] {
+        width: 100%;
+    }
+    
+    input[type="checkbox"] {
+        margin-left: .25em;
+    }
+    
+    textarea {
+        width: 100%;
+        min-height: 450px;
+    }
+}

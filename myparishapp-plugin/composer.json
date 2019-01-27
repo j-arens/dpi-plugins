@@ -1,0 +1,19 @@
+{
+    "name": "dpi/myParishAppPlugin",
+    "description": "WordPress plugin for pulling and displaying myParishApp messages.",
+    "type": "project",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Josh Arens",
+            "email": "arens.joshua@sbcglobal.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "MyParishApp\\Plugin\\": "./Plugin",
+            "MyParishApp\\Components\\": "./Components"
+        }
+    }
+}

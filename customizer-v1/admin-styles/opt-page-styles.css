@@ -1,0 +1,210 @@
+/**** DPI OPT PAGE ****/
+#wpbody-content {
+  padding: 0; }
+
+.update-nag,
+#footer-thankyou,
+#footer-upgrade {
+  display: none; }
+
+#dpi-opt-page {
+  width: calc(100% + 1.25rem);
+  height: 100%;
+  position: relative;
+  margin-left: -1.25rem;
+  box-sizing: border-box; }
+  #dpi-opt-page * {
+    box-sizing: border-box; }
+  #dpi-opt-page .site-section-nav {
+    height: 100%;
+    width: 15.625rem;
+    display: inline-block;
+    background: white;
+    border-right: 0.0625rem solid #eee; }
+    #dpi-opt-page .site-section-nav .promo-section {
+      width: 100%;
+      height: 3.5rem;
+      background: #303f9f;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      #dpi-opt-page .site-section-nav .promo-section h1 {
+        padding-left: 1.17188rem;
+        color: white; }
+    #dpi-opt-page .site-section-nav .nav-title {
+      display: inline-block;
+      padding: 1.17188rem;
+      color: #6a6c6f; }
+    #dpi-opt-page .site-section-nav ul,
+    #dpi-opt-page .site-section-nav li {
+      margin: 0; }
+    #dpi-opt-page .site-section-nav li {
+      color: #6a6c6f;
+      font-size: 1rem;
+      padding: 1.17188rem 0 1.17188rem 1.17188rem;
+      position: relative;
+      text-transform: capitalize; }
+      #dpi-opt-page .site-section-nav li:not(.active-tab):hover {
+        background: #f5f7f9;
+        cursor: pointer; }
+      #dpi-opt-page .site-section-nav li svg {
+        width: 1.125rem;
+        height: 1.125rem;
+        display: inline-block;
+        vertical-align: bottom;
+        fill: #6a6c6f;
+        margin-right: 0.625rem; }
+    #dpi-opt-page .site-section-nav .active-tab {
+      background: #d5dee6; }
+      #dpi-opt-page .site-section-nav .active-tab > svg {
+        fill: #5bb0e6; }
+  #dpi-opt-page .opt-page-form {
+    display: inline-block;
+    width: calc(100% - 15.625rem);
+    height: 100%;
+    vertical-align: top;
+    background: #edf0f5; }
+  #dpi-opt-page .top-nav {
+    width: 100%;
+    height: 3.5rem;
+    background: #3f51b5;
+    margin-bottom: 1.25rem; }
+  #dpi-opt-page .tab-panel-container {
+    height: calc(100% - 6.75rem);
+    width: calc(100% - 2.5rem);
+    margin: 0 auto;
+    position: relative; }
+  #dpi-opt-page .tab-nav {
+    margin-bottom: 1.25rem;
+    height: 3.5rem;
+    border: 0.0625rem solid #eee;
+    background: white; }
+    #dpi-opt-page .tab-nav ul,
+    #dpi-opt-page .tab-nav li {
+      margin: 0;
+      height: 100%; }
+    #dpi-opt-page .tab-nav li {
+      background: #d5dee6;
+      color: #6a6c6f;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0 1.25rem;
+      vertical-align: top;
+      border-bottom: 0.25rem solid #6a6c6f; }
+      #dpi-opt-page .tab-nav li:not(.active-part):hover {
+        cursor: pointer;
+        background: #f5f7f9;
+        border-bottom-color: #d1d2d4; }
+    #dpi-opt-page .tab-nav .active-part {
+      color: white;
+      background: #606fc7;
+      border-bottom-color: #3f51b5; }
+  #dpi-opt-page .tab-panel {
+    background: white;
+    border: 0.0625rem solid #eee;
+    position: relative; }
+    #dpi-opt-page .tab-panel .component {
+      background: white;
+      margin: 0;
+      padding: 0.625rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+    #dpi-opt-page .tab-panel .active-component {
+      z-index: 2; }
+    #dpi-opt-page .tab-panel .input-wrapper {
+      padding: 1.25rem;
+      border: 0.0625rem solid #eee;
+      max-width: calc(25% - 1.25rem);
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 calc(25% - 1.25rem);
+              flex: 0 0 calc(25% - 1.25rem);
+      margin: 0.625rem;
+      height: calc(50% - 1.25rem);
+      overflow-y: auto;
+      overflow-x: hidden; }
+      #dpi-opt-page .tab-panel .input-wrapper input {
+        width: 100%;
+        height: 2.5rem;
+        margin-bottom: 0.625rem; }
+      #dpi-opt-page .tab-panel .input-wrapper textarea {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0.625rem; }
+      #dpi-opt-page .tab-panel .input-wrapper label {
+        display: block;
+        margin-bottom: 1.25rem; }
+    #dpi-opt-page .tab-panel .component-title {
+      display: block;
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      text-transform: capitalize; }
+    #dpi-opt-page .tab-panel .piece-title {
+      display: block;
+      margin-bottom: 0.625rem; }
+    #dpi-opt-page .tab-panel .colorpicker {
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+              transform: translate(-50%, 0);
+      background: #FFF;
+      z-index: 99;
+      border-radius: 100%; }
+    #dpi-opt-page .tab-panel .image_preview {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 0.625rem; }
+  #dpi-opt-page .site-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%; }
+  #dpi-opt-page .active-section {
+    z-index: 2; }
+  #dpi-opt-page .tab-panel {
+    width: 100%;
+    height: calc(100% - 4.75rem);
+    margin: 0;
+    position: relative; }
+  #dpi-opt-page .submit-form {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    #dpi-opt-page .submit-form input {
+      height: 3.5rem;
+      margin: 0;
+      padding: 0 2em;
+      border: none;
+      background: #4caf50;
+      color: white;
+      font-size: 1.125rem;
+      text-transform: capitalize; }
+      #dpi-opt-page .submit-form input:hover {
+        cursor: pointer;
+        background: #6ec071; }
+
+/*# sourceMappingURL=opt-page-styles.css.map */

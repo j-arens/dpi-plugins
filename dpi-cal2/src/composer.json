@@ -1,0 +1,20 @@
+{
+    "name": "diocesan/dpi-cal",
+    "description": "Wordpress plugin to pull and display event from Google Calendar",
+    "type": "project",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Josh Arens",
+            "email": "jarens@diocesan.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "yahnis-elsts/plugin-update-checker": "^4.0"
+    },
+    "autoload": {
+      "classmap": ["classes"],
+      "files": ["vendor/yahnis-elsts/plugin-update-checker/plugin-update-checker.php"]
+    }
+}

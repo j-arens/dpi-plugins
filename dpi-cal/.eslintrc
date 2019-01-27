@@ -1,0 +1,15 @@
+{
+  "root": true,
+  "extends": ["eslint:recommended"],
+  "globals": {
+    "wp": true,
+    "dpi_cal_opts": true
+  },
+  "env": {
+    "browser": true,
+    "jquery": true,
+  },
+  "rules": {
+    # "no-console": 0
+    }
+}

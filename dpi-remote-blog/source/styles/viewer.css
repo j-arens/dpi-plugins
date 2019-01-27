@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400i|Roboto');
+
+/**
+* Vars
+*/
+:root {
+    --viewerSerif: 'Droid Serif', serif;
+    --viewerSansSerif: 'Roboto', sans-serif;
+    --viewerColorBg: rgba(255, 255, 255, 0.97);
+    --viewerColorText: rgba(59, 59, 59, 0.7);
+    --viewerColorAction: #D2232A;
+    --viewerImageBoxShadow: 0 0 5px 1px rgba(59, 59, 59, 0.2);
+}
+
+/**
+* Breakpoints
+*/
+@custom-media --breakpoint-lg (min-width: 1200px);
+@custom-media --breakpoint-md (min-width: 1000px);
+@custom-media --breakpoint-sm (min-width: 700px);
+@custom-media --breakpoint-xs (min-width: 400px);
+
+/**
+* Root styles
+*/
+#dpiBlog-viewer__root {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 1em;
+    background: var(--viewerColorBg);
+    font-size: 16px;
+    font-family: var(--viewerSansSerif);
+    color: var(--viewerColorText);
+    overflow-y: auto;
+    box-sizing: border-box;
+    animation: .1s ease-in 0s forwards dpiBlogViewer-fx-transition;
+    
+    & * {
+        box-sizing: inherit;
+        
+        &::before,
+        &::after {
+        box-sizing: inherit;
+        }
+    }
+
+    & button:hover {
+        border: none;
+        background: none;
+    }
+}
+
+/**
+* Namespaced rules
+*/
+.dpiBlog-viewer__ {
+    &close-btn {
+        position: absolute;
+        top: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;
+        background: none;
+        border: none;
+        width: 3em;
+        height: 3em;
+        text-align: center;
+        cursor: pointer;
+        font-size: 1.01em;
+        font-family: var(--viewerSerif);
+        font-style: italic;
+        font-weight: initial;
+        color: var(--viewerColorAction);
+    }
+
+    &close-icon {
+        pointer-events: none;
+        width: 1rem;
+        height: 1rem;
+        margin-bottom: 0.25rem;
+        fill: currentColor;
+    }
+
+    &container {
+        max-width: 50em;
+        width: 100%;
+        margin: 0 auto;
+        padding: 6em 0 4em 0;
+        transition: opacity .1s ease-in, max-width .3s ease-in;
+    }
+
+    &article-date {
+        display: block;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    &article-title {
+        max-width: 62.5em;
+        text-align: center;
+        font-size: 3em;
+        font-family: var(--viewerSerif);
+        font-style: italic;
+        line-height: 1.3;
+        margin: 0 0 3rem 0;
+        padding: 0;
+    }
+
+    &article-img {
+        width: 100%;
+        height: 25em;
+        margin-bottom: 1em;
+        box-shadow: var(--viewerImageBoxShadow);
+    }
+
+    &article-img-placeholder {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 4px;
+    }
+
+    &article-content {
+        font-size: 1.03em;
+        padding: 2em 1em;
+        line-height: 1.35;
+        word-spacing: 0.1em;
+
+        & p {
+            margin-bottom: 1.3em;
+        }
+
+        & a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    &nav {
+        padding: 0 1em;
+        height: 4em;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &nav-btn {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
+        color: var(--viewerColorAction);
+    }
+
+    &nav-btn::before,
+    &nav-btn::after {
+        display: block;
+        font-size: 1.3em;
+        font-family: var(--viewerSerif);
+        font-weight: initial;
+    }
+
+    &nav-btn[data-action="prev"] {
+        justify-content: flex-start;
+        margin-right: auto;
+    }
+
+    &nav-btn[data-action="prev"]::after {
+        content: 'Prev';
+        padding-left: 1rem;
+    }
+
+    &nav-btn[data-action="next"] {
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+
+    &nav-btn[data-action="next"] &nav-title {
+        order: 0;
+    }
+
+    &nav-btn[data-action="next"] &nav-icon {
+        order: 1;
+    }
+
+    &nav-btn[data-action="next"]::before {
+        content: 'Next';
+        padding-right: 1rem;
+    }
+
+    &nav-icon {
+        pointer-events: none;
+        width: 1.5em;
+        height: 1.5em;
+        transform: skew(-7deg);
+        fill: currentColor;
+    }
+
+    &nav-btn[data-action="prev"] &nav-icon {
+        transform: rotate(180deg) skew(-7deg);
+    }
+
+    &nav-title {
+        display: none;
+        pointer-events: none;
+        font-size: 1.25em;
+        font-family: var(--viewerSerif);
+        font-weight: initial;
+        font-style: italic;
+        padding: 0 1rem;
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    &fx-hide {
+        opacity: 0;
+    }
+}
+
+/**
+* Exceptions for the wp admin bar
+*/
+body.admin-bar {
+    & .dpiBlog-viewer__close-btn {
+        top: calc(1.5em + 32px);
+    }
+}
+
+/**
+* Media queries
+*/
+@media screen and (--breakpoint-xs) {
+    .dpiBlog-viewer__ {
+        &article-content {
+            padding: 2em;
+        }
+
+        &nav {
+            padding: 0 2em;
+        }
+    }
+}
+
+@media screen and (--breakpoint-sm) {
+    .dpiBlog-viewer__ {
+        &nav-btn {
+            width: 100%;
+            max-width: 45%;
+        }
+
+        &nav-btn::before,
+        &nav-btn::after {
+            display: none;
+        }
+
+        &nav-title {
+            display: block;
+        }
+    }
+}
+
+@media screen and (--breakpoint-md) {
+    .dpiBlog-viewer__ {
+        &close-btn {
+            left: initial;
+            right: 1em;
+        }
+
+        &container {
+            padding: 8em 0 4em 0;
+        }
+
+        &article-content {
+            padding: 2em 4em;
+        }
+
+        &nav {
+            padding: 0 4em;
+        }
+    }
+}
+
+@media screen and (--breakpoint-lg) {
+    .dpiBlog-viewer__ {
+        &close-btn {
+            position: fixed;
+            top: 1.5em;
+            right: 2em;
+        }
+
+        &container {
+            max-width: 62.5em;
+        }
+    }
+}
+
+/**
+* Animations
+*/
+@keyframes dpiBlogViewer-fx-transition {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

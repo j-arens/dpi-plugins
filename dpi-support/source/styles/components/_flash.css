@@ -1,0 +1,69 @@
+:root {
+    --flashBgColorBase: var(--colorWhite);
+    --flashBorderBase: 3px solid #f7f7f7;
+    --flashBoxShadow: 0 0 8px 3px rgba(200, 200, 235, .5);
+
+    /* danger */
+    --flashColorDanger: var(--colorWhite);
+    --flashBgColorDanger: var(--colorDanger);
+    --flashBorderColorDanger: rgb(229, 98, 98);
+}
+
+.c-flash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.c-flash-- {
+    &message {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        margin: 0;
+        font-size: 1.5em;
+        height: 5rem;
+        padding: 1rem 2em;
+        background-color: var(--flashBgColorBase);
+        border-bottom: var(--flashBorderBase);
+        box-shadow: var(--flashBoxShadow);
+        animation: .2s ease-in 0s flash-slide-down;
+
+        &__is-hidden {
+            z-index: 0;
+            animation: .2s ease-out 0s 1 forwards flash-slide-up;
+        }
+    }
+
+    &close-btn {
+        @apply --btn-base;
+        padding: 0;
+        background: none;
+        border: none;
+        margin-right: 1em;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    &close-btn-icon {
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.c-flash__ {
+    &danger {
+        color: var(--flashColorDanger);
+        background-color: var(--flashBgColorDanger);
+        border-color: var(--flashBorderColorDanger);
+    }
+}

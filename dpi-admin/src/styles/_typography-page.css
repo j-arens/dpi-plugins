@@ -1,0 +1,11 @@
+/**** TYPOGRAPHY PAGE STYLES ****/
+
+.no-content {
+  margin-top: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  padding-top: 2em;
+  font-size: 1.25em;
+}

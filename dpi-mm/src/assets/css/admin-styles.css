@@ -1,0 +1,38 @@
+#dpi_mm_settings_page {
+
+  tr {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+  }
+
+  td {
+    margin-left: -1em;
+    margin-top: -2em;
+    padding: 15px 10px 0 10px;
+  }
+
+  th {
+    width: 100%;
+    padding: 20px 10px 15px 0;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  input[type="checkbox"] {
+    margin-left: .25em;
+  }
+
+  a {
+    display: inline-block;
+    margin: .5em 0 0 .5em;
+  }
+
+  .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+}

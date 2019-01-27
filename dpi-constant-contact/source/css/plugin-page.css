@@ -1,0 +1,33 @@
+#dpi-cc-settings-page .form-table {
+  max-width: 450px;
+}
+
+#dpi-cc-settings-page tr {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#dpi-cc-settings-page td {
+  margin-left: -1em;
+  margin-top: -2em;
+}
+
+#dpi-cc-settings-page th,
+#dpi-cc-settings-page input[type="text"] {
+  width: 100%;
+}
+
+#dpi-cc-settings-page input[type="checkbox"] {
+  margin-left: .25em;
+}
+
+#dpi-cc-settings-page a {
+  display: inline-block;
+  margin: .5em 0 0 .5em;
+}
+
+#dpi-cc-settings-page .disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

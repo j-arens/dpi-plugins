@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400i|Roboto');
+
+
+/**
+* Vars
+*/
+:root {
+    --articleCardsSerif: 'Droid Serif', serif;
+    --articleCardsSansSerif: 'Roboto', sans-serif;
+    --articleCardsColorText: rgba(59, 59, 59, 0.7);
+    --articleCardsColorRule: rgba(59, 59, 59, 0.2);
+    --articleCardsBoxShadow: rgba(59, 59, 59, 0.2);
+}
+
+
+/**
+* Breakpoints
+*/
+@custom-media --breakpoint-xs (min-width: 25em);
+@custom-media --breakpoint-sm (min-width: 36.875em);
+@custom-media --breakpoint-md (min-width: 73.75em);
+@custom-media --breakpoint-lg (min-width: 109.375em);
+
+
+/**
+* Root styles
+*/
+#dpiBlog-articleCards__root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 1em;
+    font-size: 16px;
+    font-family: var(--articleCardsSansSerif);
+
+    & * {
+        box-sizing: inherit;
+
+        &::before,
+        &::after {
+            box-sizing: inherit;
+        }
+    }
+}
+
+
+/**
+* Namespaced rules
+*/
+.dpiBlog-articleCards__ {
+    &article {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: #fff;
+        border-radius: 4px;
+        margin-bottom: 2em;
+        box-shadow: 0 0 5px 1px rgba(59, 59, 59, 0.3);
+
+        &:not(:first-of-type) {
+            display: none;
+        }
+    }
+
+    &article + &article {
+        margin-left: 2em;
+    }
+
+    &figure,
+    &content {
+        flex-basis: 50%;
+    }
+
+    &figure {
+        margin: 0;
+        padding: 0;
+    }
+
+    &figure-img {
+        width: 100%;
+        height: 12.5em;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        opacity: 0.825;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    &content {
+        display: flex;
+        flex-direction: column;
+        padding: 1em 2em;
+        color: var(--articleCardsColorText);
+    }
+
+    &title {
+        text-align: center;
+        font-family: var(--articleCardsSerif);
+        font-style: italic;
+        line-height: 1.3;
+        font-size: 1.25em;
+        margin: 0 0 1rem 0;
+    }
+
+    &rule {
+        border: none;
+        height: 1px;
+        background: var(--articleCardsColorRule);
+        margin: 0 0 1em 0;
+    }
+
+    &excerpt {
+        display: none;
+        position: relative;
+        line-height: 1.35;
+        word-spacing: 0.1em;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    &excerpt::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2em;
+        background: linear-gradient(transparent 0%, #fff 70%);
+    }
+
+    &link {
+        font-family: var(--articleCardsSerif);
+        font-style: italic;
+        color: inherit;
+        text-decoration: none;
+        margin: auto auto 0 auto;
+    }
+
+    &link:hover &link-icon {
+        fill: currentColor;
+    }
+
+    &link-icon {
+        pointer-events: none;
+        display: inline-block;
+        vertical-align: -0.1em;
+        fill: var(--articleCardsColorText);
+        width: 1em;
+        height: 1em;
+        margin: 0 0 0 .25em;
+        transform: skewX(-7deg);
+    }
+}
+
+
+/**
+* Media queries
+*/
+@media screen and (--breakpoint-xs) {
+    .dpiBlog-articleCards__ {
+        &article {
+            height: 25em;
+        }
+
+        &figure-img {
+            height: 100%;
+        }
+
+        &rule {
+            margin: 0 0 0.5em 0;
+        }
+
+        &title {
+            margin: 0 0 0.5rem 0;
+        }
+
+        &excerpt {
+            display: block;
+        }
+    }
+}
+
+@media screen and (--breakpoint-sm) {
+    .dpiBlog-articleCards__ {
+        &article {
+            width: 34.375em;
+            flex-direction: row;
+            transition: all .1s ease-in;
+        }
+
+        &article:hover {
+            transform: scale(1.0125);
+            box-shadow: 2px 1px 10px 2px rgba(59, 59, 59, 0.2);
+        }
+
+        &rule {
+            margin: 0 0 1em 0;
+        }
+
+        &title {
+            margin: 0 0 1rem 0;
+        }
+
+        &excerpt::after {
+            height: 4em;
+        }
+    }
+}
+
+@media screen and (--breakpoint-md) {
+    .dpiBlog-articleCards__article:nth-of-type(2) {
+        display: flex;
+    }
+}
+
+@media screen and (--breakpoint-lg) {
+    .dpiBlog-articleCards__article:nth-of-type(n+0) {
+        display: flex;
+    }
+}

@@ -1,0 +1,13 @@
+<svg
+   width="25"
+   height="32"
+   viewBox="0 0 25 32"
+   id="svg2"
+   version="1.1"
+   xmlns="http://www.w3.org/2000/svg" 
+   xmlns:xlink= "http://www.w3.org/1999/xlink">
+  <path
+     class="myparish_arrow_prev"
+     d="M 25,32 0,16 25,0 25,32 Z"
+     id="path9" />
+</svg>

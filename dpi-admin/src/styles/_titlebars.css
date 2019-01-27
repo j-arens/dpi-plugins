@@ -1,0 +1,123 @@
+/**** TITLEBAR STYLES ****/
+
+.titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2em;
+  background: $color_white;
+  border-bottom: 1px solid $color_border;
+  height: 4em;
+  position: relative;
+  width: calc(100% + 4em);
+  margin-left: -2em;
+  margin-bottom: 2em;
+}
+
+.section-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5em 1em;
+  min-height: 2em;
+  border-bottom: 1px solid $color_border;
+  width: calc(100% + 4em);
+  margin-left: -2em;
+  margin-bottom: 2em;
+  background: $color_primary_lt;
+  color: $color_white;
+
+  button {
+    border: none;
+    background: none;
+    color: $color_border;
+    cursor: pointer;
+  }
+}
+
+.component-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5em 1em;
+  min-height: 2em;
+  border-bottom: 1px solid $color_border;
+  width: calc(100% + 4em);
+  margin-left: -2em;
+  margin-bottom: 1em;
+  background: $color_purple;
+  color: $color_white;
+
+  button {
+    border: none;
+    background: none;
+    color: $color_border;
+    cursor: pointer;
+  }
+}
+
+.element-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5em 1em;
+  min-height: 2em;
+  border-bottom: 1px solid $color_border;
+  width: calc(100% + 4em);
+  margin-left: -2em;
+  margin-bottom: 1em;
+  background: $color_bar_green;
+  color: $color_white;
+
+  button {
+    border: none;
+    background: none;
+    color: $color_border;
+    cursor: pointer;
+  }
+}
+
+.field-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5em 1em;
+  min-height: 2em;
+  border-bottom: 1px solid $color_border;
+  width: calc(100% + 4em);
+  margin-left: -2em;
+  margin-bottom: 1em;
+  background: #b3bac7;
+  color: $color_white;
+
+  button {
+    border: none;
+    background: none;
+    color: $color_border;
+    cursor: pointer;
+  }
+}
+
+.modaltitlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5em 1em;
+  min-height: 2em;
+  border-bottom: 1px solid $color_border;
+  width: calc(100% + 4em);
+  margin-left: -2em;
+  margin-bottom: 1em;
+  background: $color_neutral;
+
+  button {
+    border: none;
+    background: none;
+    color: $color_border;
+    cursor: pointer;
+  }
+}
+
+.title {
+  margin: 0 !important;
+}

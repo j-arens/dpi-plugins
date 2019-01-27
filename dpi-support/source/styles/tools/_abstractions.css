@@ -1,0 +1,21 @@
+:root {
+    --flex-center: {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    };
+
+    --clearfix: {
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    };
+
+    --no-wrap {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}

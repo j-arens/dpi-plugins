@@ -1,0 +1,27 @@
+#dpi-maps-settings-page .form-table {
+  max-width: 450px; }
+
+#dpi-maps-settings-page tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%; }
+
+#dpi-maps-settings-page td {
+  margin-left: -1em;
+  margin-top: -2em; }
+
+#dpi-maps-settings-page th,
+#dpi-maps-settings-page input[type="text"] {
+  width: 100%; }
+
+#dpi-maps-settings-page input[type="checkbox"] {
+  margin-left: .25em; }
+
+#dpi-maps-settings-page textarea {
+  width: 100%;
+  min-height: 450px; }

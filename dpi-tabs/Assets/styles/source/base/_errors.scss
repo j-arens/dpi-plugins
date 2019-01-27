@@ -1,0 +1,7 @@
+.dpi-tabs__ {
+    &error {
+        background-color: $color-error-lt;
+        padding: 16px;
+        border: 1px dashed $color-error;
+    }
+}

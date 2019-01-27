@@ -1,0 +1,32 @@
+#dpi-login-settings-page h1 {
+    margin-bottom: 2em;
+}
+
+#dpi-login-settings-page .dpi-login-settings-form {
+    position: relative;
+}
+
+#dpi-login-settings-page .form-table {
+    border-collapse: separate;
+}
+
+#dpi-login-settings-page .editor {
+    border: none;
+    background: none;
+    box-shadow: none;
+    resize: none;
+    position: relative;
+}
+
+#dpi-login-settings-page th {
+    font-size: 1.1em;
+}
+
+#dpi-login-settings-page .dpi-login-image {
+    display: block;
+    margin-bottom: 1em;
+}
+
+#dpi-login-settings-page .disable-ui {
+    display: none;
+}

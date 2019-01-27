@@ -1,0 +1,193 @@
+:root {
+    --flex-center: {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    };
+    
+    /* base vars */
+    --btnBgColorBase: var(--colorWhite);
+    --btnBorderColorBase: #e1e8ee;
+    --btnBorderRadiusBase: 4px;
+    --btnBoxShadowBase: 0 0 1px 0.5px rgba(30, 30, 30, 0.1);
+
+    /* primary vars */
+    --btnBgColorPrimary: var(--colorPrimary);
+    --btnBorderColorPrimary: var(--colorPrimary);
+    --btnColorPrimary: var(--colorWhite);
+    --btnBoxShadowPrimary: 0 0 1px 0.5px rgba(30, 30, 30, 0.4);
+
+    /* success vars */
+    --btnBgColorSuccess: var(--colorSuccess);
+    --btnBorderColorSuccess: var(--colorSuccess);
+    --btnColorSuccess: var(--colorWhite);
+    --btnBoxShadowSuccess: 0 0 1px 0.5px rgba(30, 30, 30, 0.2);
+
+    /* danger vars */
+    --btnBgColorDanger: var(--colorDanger);
+    --btnBorderColorDanger: var(--colorDanger);
+    --btnColorDanger: var(--colorWhite);
+    --btnBoxShadowDanger: 0 0 1px 0.5px rgba(30, 30, 30, 0.2);
+
+    /* caution vars */
+    --btnBgColorCaution: var(--colorCaution);
+    --btnBorderColorCaution: var(--colorCaution);
+    --btnColorCaution: var(--colorWhite);
+    --btnBoxShadowCaution: 0 0 1px 0.5px rgba(30, 30, 30, 0.2);
+
+    /* pulse effect */
+    --btnPulseBgColorBase: rgba(225, 232, 238, 0.5);
+    --btnPulseBgColorPrimary: rgba(76, 102, 140, 0.7);
+    --btnPulseBgColorSuccess: rgba(163, 226, 129, 0.5);
+    --btnPulseBgColorDanger: rgba(229, 98, 98, 0.5);
+    --btnPulseBgColorCaution: rgba(224, 204, 70, 0.5);
+
+    --btn-pulse-base {
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            transform-origin: center center;
+            height: 225%;
+            width: 100%;
+            border-radius: 50%;
+            background: var(--btnPulseBgColorBase);
+        }
+    };
+
+    --btn-pulse-primary {
+        &::after {
+            background: var(--btnPulseBgColorPrimary);
+        }
+    };
+
+    --btn-pulse-success {
+        &::after {
+            background: var(--btnPulseBgColorSuccess);
+        }
+    };
+
+    --btn-pulse-danger {
+        &::after {
+            background: var(--btnPulseBgColorDanger);
+        }
+    };
+
+    --btn-pulse-caution {
+        &::after {
+            background: var(--btnPulseBgColorCaution);
+        }
+    };
+
+    /* base compostion */
+    --btn-base {
+        @apply --flex-center;
+        @apply --btn-pulse-base;
+        position: relative;
+        color: inherit;
+        overflow: hidden;
+        font-family: inherit;
+        font-size: 1.125em;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        padding: 1.2375rem 2.3125rem;
+        background: var(--btnBgColorBase);
+        border: 2px solid var(--btnBorderColorBase);
+        border-radius: var(--btnBorderRadiusBase);
+        box-shadow: var(--btnBoxShadowBase);
+        cursor: pointer;
+        zoom: 1;
+        transition: transform 0.05s ease-out;
+        &:focus {
+            outline: 0;
+        }
+        &:active {
+            box-shadow: none;
+            transform: scale3d(0.99, 0.99, 0.99);
+        }
+        &:hover::after {
+            animation: pulse-button 0.8s 1;
+        }
+        & svg {
+            fill: currentColor;
+            width: 1.25em;
+            height: 1.25em;
+        }
+        & > * {
+            color: currentColor;
+            position: relative;
+            z-index: 1;
+        }
+        & > * + * {
+            margin-left: 1em;
+        }
+    };
+
+    /* primary composition */
+    --btn-primary {
+        @apply --btn-pulse-primary;
+        background: var(--btnBgColorPrimary);
+        border-color: var(--btnBorderColorPrimary);
+        color: var(--btnColorPrimary);
+        box-shadow: var(--btnBoxShadowPrimary);
+    };
+
+    /* success composition */
+    --btn-success {
+        @apply --btn-pulse-success;
+        background: var(--btnBgColorSuccess);
+        border-color: var(--btnBorderColorSuccess);
+        color: var(--btnColorSuccess);
+        box-shadow: var(--btnBoxShadowSuccess);
+    };
+
+    /* danger composition */
+    --btn-danger {
+        @apply --btn-pulse-danger;
+        background: var(--btnBgColorDanger);
+        border-color: var(--btnBorderColorDanger);
+        color: var(--btnColorDanger);
+        box-shadow: var(--btnBoxShadowDanger);
+    };
+
+    /* caution composition */
+    --btn-caution {
+        @apply --btn-pulse-caution;
+        background: var(--btnBgColorCaution);
+        border-color: var(--btnBorderColorCaution);
+        color: var(--btnColorCaution);
+        box-shadow: var(--btnBoxShadowCaution);
+    };
+}
+
+button {
+    @apply --btn-base;
+}
+
+button[type="submit"] {
+    @apply --btn-success;
+}
+
+.c-button {
+    @apply --btn-base;
+}
+
+.c-button--primary {
+    @apply --btn-primary;
+}
+
+.c-button--success {
+    @apply --btn-success;
+}
+
+.c-button--caution {
+    @apply --btn-caution;
+}
+
+.c-button--danger {
+    @apply --btn-danger;
+}

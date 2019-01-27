@@ -1,0 +1,48 @@
+/**** LOADER STYLES ****/
+
+.dpi-admin-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $color_white;
+  z-index: 99;
+}
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 15px solid #b3bac7;
+  opacity: 0.9;
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+
+  &::after {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 15px solid transparent;
+    border-top-color: #4968bf;
+    border-bottom-color: #4968bf;
+    animation: spin 1.5s ease infinite;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

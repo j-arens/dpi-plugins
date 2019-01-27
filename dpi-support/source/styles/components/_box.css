@@ -1,0 +1,16 @@
+:root {
+    --boxBorderColor: #f7f7f7;
+    --boxBorderRadius: 4px;
+}
+
+.c-box {
+    background-color: var(--colorWhite);
+    border: 3px solid var(--boxBorderColor);
+    border-radius: var(--boxBorderRadius);
+    padding: 2.1875rem 1.5625rem;
+}
+
+.c-box__raised {
+    box-shadow: 0 0 8px 3px rgba(200, 200, 235, 0.3);
+    border: none;
+}

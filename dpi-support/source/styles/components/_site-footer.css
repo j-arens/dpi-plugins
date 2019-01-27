@@ -1,0 +1,21 @@
+:root {
+    --flex-center: {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    };
+    
+    --footerBorderColor: #eee;
+    --footerBgColor: #f9f9f9;
+}
+
+.c-site-footer {
+    @apply --flex-center;
+    border-top: 2px solid var(--footerBorderColor);
+}
+
+.c-site-footer__full-width {
+    width: 100%;
+    background-color: var(--footerBgColor);
+    min-height: 6.25em;
+}

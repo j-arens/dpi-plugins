@@ -1,0 +1,66 @@
+/**** POPDOWN STYLES ****/
+
+.popdown {
+  position: fixed;
+  top: -20%;
+  left: 36%;
+  width: 40%;
+  min-height: 7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+  z-index: 999;
+
+  p {
+    margin: 0;
+    font-size: 1.8em;
+  }
+
+  button {
+    background: none;
+    border: none;
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    cursor: pointer;
+
+    &:focus {
+      outline: 0 !important;
+      box-shadow: none;
+    }
+  }
+}
+
+.success {
+  background: $color_success;
+}
+
+.alert {
+  background: $color_alert;
+}
+
+.warning {
+  background: $color_warning;
+}
+
+.slideDown {
+  animation: slideDown .3s ease forwards;
+}
+
+.slideUp {
+  animation: slideUp .3s ease forwards;
+}
+
+@keyframes slideDown {
+  to {
+    top: 30%;
+  }
+}
+
+@keyframes SlideUp {
+  to {
+    top: -7em;
+  }
+}

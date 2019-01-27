@@ -1,0 +1,29 @@
+{
+  "name": "dpi-prepop",
+  "version": "0.0.1",
+  "description": "Adds special fields that will be prepopulated on the client with DPI specefic data.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js --progress --colors",
+    "build-watch": "webpack --config webpack.config.js --progress --colors -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-arens/dpi-prepop.git"
+  },
+  "author": "Josh Arens",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/j-arens/dpi-prepop/issues"
+  },
+  "homepage": "https://github.com/j-arens/dpi-prepop#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^4.5.0",
+    "eslint-loader": "^1.9.0",
+    "webpack": "^3.5.5"
+  }
+}

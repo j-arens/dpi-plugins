@@ -1,0 +1,18 @@
+{
+  "root": true,
+  "extends": ["eslint:recommended", "plugin:import/warnings"],
+  "globals": {
+    "wp": true
+  },
+  "env": {
+    "es6": true,
+    "amd": true,
+    "browser": true,
+    "jquery": true,
+    "node": true
+  },
+  "rules": {
+    "no-console": "warn",
+    "import/extensions": [1, { "js": "never" }],
+  }
+}

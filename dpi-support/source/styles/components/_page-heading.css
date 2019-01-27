@@ -1,0 +1,33 @@
+:root {
+    --pageHeadingBorderColor: #eee;
+    --pageHeadingTitleColor: #43484d;
+    --pageHeadingIconFill: #c3cfd8;
+    --pageHeadingSubtitleColor: #5e6977;
+}
+
+.page-heading {
+    border-bottom: 1px solid var(--pageHeadingBorderColor);
+    padding-bottom: 1.5625em;
+    margin-bottom: 1.875em;
+}
+
+.page-heading-- {
+    &title {
+        margin-top: 0;
+        margin-bottom: 1.5625rem;
+        font-size: 2.375em;
+        color: var(--pageHeadingTitleColor);
+    }
+
+    &icon {
+        width: 3.125rem;
+        height: 3.125rem;
+        vertical-align: -0.75rem;
+        margin-right: 1.125rem;
+        fill: var(--pageHeadingIconFill);
+    }
+
+    &sub-title {
+        color: var(--pageHeadingSubtitleColor);
+    }
+}
